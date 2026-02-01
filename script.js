@@ -43,28 +43,25 @@ gravitySlider.addEventListener('input', function() {
 
 // Power level messages based on gravity
 function updatePowerMessage(gravity) {
+    const messageColor = '#666';
+    
     if (gravity < 50) {
         powerMessage.textContent = "Level: Beginner";
-        powerMessage.style.color = "#888";
     } else if (gravity < 100) {
         powerMessage.textContent = "Level: Intermediate";
-        powerMessage.style.color = "#999";
     } else if (gravity < 200) {
         powerMessage.textContent = "Level: Advanced";
-        powerMessage.style.color = "#aaa";
     } else if (gravity < 300) {
         powerMessage.textContent = "Level: Expert";
-        powerMessage.style.color = "#bbb";
     } else if (gravity < 400) {
         powerMessage.textContent = "Level: Elite";
-        powerMessage.style.color = "#ccc";
     } else if (gravity < 500) {
         powerMessage.textContent = "Level: Master";
-        powerMessage.style.color = "#ddd";
     } else {
         powerMessage.textContent = "Level: Maximum";
-        powerMessage.style.color = "#eee";
     }
+    
+    powerMessage.style.color = messageColor;
 }
 
 function highlightCard(index) {

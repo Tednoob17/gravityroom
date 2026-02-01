@@ -255,7 +255,6 @@ header {
     background: #1a1a1a;
     border-radius: 0;
     transition: width 0.3s ease;
-    width: 0;
 }
 
 #power-message {
