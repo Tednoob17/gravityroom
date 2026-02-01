@@ -3,133 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gravity Room - Professional Development</title>
+
+    <title>Capsule Corp Gravity Room - Cybersecurity Training</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>Gravity Room</h1>
+    <div class="container">
+        <header>
+            <h1 class="title">Gravity Room</h1>
+            <p class="subtitle">Cybersecurity & Systems Programming Training</p>
+        </header>
+
+        <div class="gravity-control">
+            <h2>Current Gravity Level</h2>
+            <div class="gravity-display">
+                <span id="gravity-value">1</span>x Earth's Gravity
+            </div>
+            <input type="range" id="gravity-slider" min="1" max="500" value="1" step="1">
+            <div class="gravity-labels">
+                <span>1x (Beginner)</span>
+                <span>500x (Legendary)</span>
+            </div>
+        </div>
+
+        <div class="training-zones">
+            <h2>Training Domains</h2>
+            
+            <div class="zone-card" data-level="intermediate">
+                <div class="zone-header">
+                    <h3>Cybersecurity</h3>
+                    <span class="difficulty">50x - 150x</span>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="training-list">
+                    <li>Network Security & Penetration Testing</li>
+                    <li>Threat Intelligence & Analysis</li>
+                    <li>Security Operations Center (SOC)</li>
+                    <li>Incident Response & Forensics</li>
+                    <li>Reverse Engineering & Malware Analysis</li>
                 </ul>
             </div>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">Welcome to the Gravity Room</h1>
-                <p class="hero-subtitle">Pushing limits through extreme training and continuous learning</p>
-            </div>
-        </section>
-
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2 class="section-title">About</h2>
-                <p class="section-description">
-                    Just as one gains strength through extreme, high-gravity training (up to 500x Earth's gravity) 
-                    in the Capsule Corp gravity room, often focusing on intense, self-imposed isolation to surpass limits, 
-                    this space represents continuous professional development and skill enhancement.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills" class="skills-section">
-            <div class="container">
-                <h2 class="section-title">Skills Development</h2>
-                
-                <div class="skill-category">
-                    <h3 class="category-title">Web Security</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                </svg>
-                            </div>
-                            <h4>Burp Suite Certified Practitioner (BSCP)</h4>
-                            <p>Comprehensive web security testing certification covering advanced vulnerability identification and exploitation techniques.</p>
-                            <a href="https://bscp.guide/" target="_blank" class="skill-link">View BSCP Guide →</a>
-                        </div>
-                        
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-                            <h4>Penetration Testing</h4>
-                            <p>Systematic security assessment methodologies for web applications and infrastructure.</p>
-                        </div>
-                        
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                                </svg>
-                            </div>
-                            <h4>Vulnerability Analysis</h4>
-                            <p>OWASP Top 10, CVE research, and security vulnerability assessment.</p>
-                        </div>
-                        
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                </svg>
-                            </div>
-                            <h4>API Security</h4>
-                            <p>RESTful and GraphQL API security testing and authentication mechanisms.</p>
-                        </div>
-                    </div>
+            <div class="zone-card" data-level="advanced">
+                <div class="zone-header">
+                    <h3>Web Security</h3>
+                    <span class="difficulty">100x - 250x</span>
                 </div>
+                <ul class="training-list">
+                    <li>OWASP Top 10 Vulnerabilities</li>
+                    <li>XSS, CSRF, SQLi Attack Vectors</li>
+                    <li>API Security & Authentication</li>
+                    <li>Web Application Firewalls (WAF)</li>
+                    <li>Secure Coding Practices</li>
+                </ul>
             </div>
-        </section>
 
-        <section id="certifications" class="certifications-section">
-            <div class="container">
-                <h2 class="section-title">Certifications & Training</h2>
-                <div class="cert-list">
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                        </div>
-                        <div class="cert-details">
-                            <h4>Burp Suite Certified Practitioner (BSCP) - In Progress</h4>
-                            <p>Advanced web application security testing certification</p>
-                            <span class="cert-year">2026</span>
-                        </div>
-                    </div>
+            <div class="zone-card" data-level="expert">
+                <div class="zone-header">
+                    <h3>Vulnerability Research</h3>
+                    <span class="difficulty">200x - 400x</span>
                 </div>
+                <ul class="training-list">
+                    <li>Zero-Day Discovery & Exploit Development</li>
+                    <li>Binary Exploitation & Buffer Overflows</li>
+                    <li>Fuzzing & Code Analysis</li>
+                    <li>Return-Oriented Programming (ROP)</li>
+                    <li>CVE Research & Bug Bounty Hunting</li>
+                </ul>
             </div>
-        </section>
 
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-description">Connect for collaboration or discussions about web security.</p>
+            <div class="zone-card" data-level="legendary">
+                <div class="zone-header">
+                    <h3>Low-Level Programming</h3>
+                    <span class="difficulty">250x - 500x</span>
+                </div>
+                <ul class="training-list">
+                    <li>C/C++ Systems Programming</li>
+                    <li>Rust Memory Safety & Concurrency</li>
+                    <li>Assembly Language & Architecture</li>
+                    <li>Kernel Development & Device Drivers</li>
+                    <li>Operating Systems Internals</li>
+                </ul>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Gravity Room. All rights reserved.</p>
         </div>
-    </footer>
+
+        <div class="schools-section">
+            <h2>Training Academies</h2>
+            <div class="schools-container">
+                <div class="school-card">
+                    <h3>Zone01</h3>
+                    <p>Peer-to-peer learning environment focusing on practical skills and project-based learning in software development and cybersecurity.</p>
+                </div>
+                <div class="school-card">
+                    <h3>42 School</h3>
+                    <p>Revolutionary coding school with no teachers, no lectures - just peers and projects. Master C, algorithms, and system programming through intense challenges.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bscp-section">
+            <h2>BSCP Exam Preparation</h2>
+            <p class="bscp-description">Burp Suite Certified Practitioner training organized by exam stages</p>
+            
+            <div class="bscp-table-container">
+                <div class="bscp-legend">
+                    <span><strong>Stage 1:</strong> Foothold</span>
+                    <span><strong>Stage 2:</strong> Privilege Escalation</span>
+                    <span><strong>Stage 3:</strong> Data Exfiltration</span>
+                </div>
+                
+                <table class="bscp-table">
+                    <thead>
+                        <tr>
+                            <th>Vulnerability Category</th>
+                            <th>Stage 1</th>
+                            <th>Stage 2</th>
+                            <th>Stage 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SQL Injection</td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Cross-site scripting (XSS)</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Cross-site request forgery (CSRF)</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Clickjacking</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>DOM-based vulnerabilities</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Cross-origin resource sharing (CORS)</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>XML external entity (XXE) injection</td>
+                            <td></td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Server-side request forgery (SSRF)</td>
+                            <td></td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>HTTP request smuggling</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>OS command injection</td>
+                            <td></td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Server-side template injection</td>
+                            <td></td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Directory traversal</td>
+                            <td></td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Access control vulnerabilities</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Authentication</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Web cache poisoning</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Insecure deserialization</td>
+                            <td></td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>HTTP Host header attacks</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>OAuth authentication</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>File upload vulnerabilities</td>
+                            <td></td>
+                            <td></td>
+                            <td class="stage-active">✓</td>
+                        </tr>
+                        <tr>
+                            <td>JWT (JSON Web Tokens)</td>
+                            <td class="stage-active">✓</td>
+                            <td class="stage-active">✓</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bscp-resources">
+                <h3>Study Resources</h3>
+                <div class="resource-links">
+                    <a href="https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study#python-scripts" target="_blank" class="resource-btn">Python Scripts</a>
+                    <a href="https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/blob/main/payloads/README.md" target="_blank" class="resource-btn">Payloads</a>
+                    <a href="https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study/tree/main/wordlists" target="_blank" class="resource-btn">Wordlists</a>
+                    <a href="https://github.com/botesjuan/Burp-Suite-Certified-Practitioner-Exam-Study" target="_blank" class="resource-btn">Full Cheat Sheet</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="power-level">
+            <h2>Progress</h2>
+            <div class="power-meter">
+                <div class="power-fill" id="power-fill"></div>
+            </div>
+            <p id="power-message">Keep training to unlock your potential</p>
+        </div>
+
+        <div class="quote-section">
+            <blockquote>
+                <p>"The only way to improve is through continuous learning, adaptation, and pushing past your current limitations."</p>
+            </blockquote>
+        </div>
+
+        <footer>
+            <p>Train consistently. Push your limits. Become better.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
