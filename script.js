@@ -3,7 +3,6 @@ const gravitySlider = document.getElementById('gravity-slider');
 const gravityValue = document.getElementById('gravity-value');
 const powerFill = document.getElementById('power-fill');
 const powerMessage = document.getElementById('power-message');
-let particleInterval = null;
 
 // Update gravity display and power level
 gravitySlider.addEventListener('input', function() {
@@ -16,14 +15,6 @@ gravitySlider.addEventListener('input', function() {
     
     // Update power message based on gravity level
     updatePowerMessage(value);
-    
-    // Add shake effect at high gravity
-    if (value > 400) {
-        document.body.style.animation = 'shake 0.5s';
-        setTimeout(() => {
-            document.body.style.animation = '';
-        }, 500);
-    }
     
     // Highlight training zones based on gravity level
     const cards = document.querySelectorAll('.zone-card');
@@ -48,39 +39,31 @@ gravitySlider.addEventListener('input', function() {
             card.style.transform = 'scale(1)';
         });
     }
-    
-    // Manage particle generation interval based on gravity
-    if (value > 300 && !particleInterval) {
-        particleInterval = setInterval(createParticles, 500);
-    } else if (value <= 300 && particleInterval) {
-        clearInterval(particleInterval);
-        particleInterval = null;
-    }
 });
 
 // Power level messages based on gravity
 function updatePowerMessage(gravity) {
     if (gravity < 50) {
-        powerMessage.textContent = "🌱 Starting your journey... Keep pushing!";
-        powerMessage.style.color = "#4CAF50";
+        powerMessage.textContent = "Level: Beginner";
+        powerMessage.style.color = "#888";
     } else if (gravity < 100) {
-        powerMessage.textContent = "💪 You're getting stronger! Don't give up!";
-        powerMessage.style.color = "#8BC34A";
+        powerMessage.textContent = "Level: Intermediate";
+        powerMessage.style.color = "#999";
     } else if (gravity < 200) {
-        powerMessage.textContent = "🔥 Impressive training! Your skills are growing!";
-        powerMessage.style.color = "#FFC107";
+        powerMessage.textContent = "Level: Advanced";
+        powerMessage.style.color = "#aaa";
     } else if (gravity < 300) {
-        powerMessage.textContent = "⚡ Incredible power! You're pushing your limits!";
-        powerMessage.style.color = "#FF9800";
+        powerMessage.textContent = "Level: Expert";
+        powerMessage.style.color = "#bbb";
     } else if (gravity < 400) {
-        powerMessage.textContent = "💥 Elite level! You're among the best!";
-        powerMessage.style.color = "#FF5722";
+        powerMessage.textContent = "Level: Elite";
+        powerMessage.style.color = "#ccc";
     } else if (gravity < 500) {
-        powerMessage.textContent = "🌟 Legendary warrior! Few can reach this level!";
-        powerMessage.style.color = "#9C27B0";
+        powerMessage.textContent = "Level: Master";
+        powerMessage.style.color = "#ddd";
     } else {
-        powerMessage.textContent = "👑 MAXIMUM POWER! You've reached the ultimate level!";
-        powerMessage.style.color = "#E91E63";
+        powerMessage.textContent = "Level: Maximum";
+        powerMessage.style.color = "#eee";
     }
 }
 
@@ -90,26 +73,6 @@ function highlightCard(index) {
         cards[index].style.opacity = '1';
         cards[index].style.transform = 'scale(1)';
     }
-}
-
-// Add particle effect on high gravity
-function createParticles() {
-    const particle = document.createElement('div');
-    particle.style.cssText = `
-        position: fixed;
-        width: 5px;
-        height: 5px;
-        background: radial-gradient(circle, #fff, #f5576c);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        left: ${Math.random() * 100}%;
-        top: ${Math.random() * 100}%;
-        animation: particle-fade 2s ease-out forwards;
-    `;
-    document.body.appendChild(particle);
-    
-    setTimeout(() => particle.remove(), 2000);
 }
 
 // Initialize
