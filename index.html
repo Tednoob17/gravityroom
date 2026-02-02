@@ -3,69 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Capsule Corp Gravity Room - Cybersecurity Training</title>
+    <title>Gravity Room - Training Center</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1 class="title">Gravity Room</h1>
-            <p class="subtitle">Cybersecurity & Systems Programming Training</p>
-        </header>
-
-        <div class="gravity-control">
-            <h2>Current Gravity Level</h2>
-            <div class="gravity-display">
-                <span id="gravity-value">1</span>x Earth's Gravity
-            </div>
-            <input type="range" id="gravity-slider" min="1" max="500" value="1" step="1">
-            <div class="gravity-labels">
-                <span>1x (Beginner)</span>
-                <span>500x (Legendary)</span>
+    <div class="hero">
+        <div class="container">
+            <h1 class="hero-title">Gravity Room</h1>
+            <p class="hero-subtitle">Push Your Limits. Master New Skills.</p>
+            <div class="cta-buttons">
+                <a href="map.html" class="btn btn-primary">Explore Skill Map</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
+    </div>
 
-        <div class="training-zones">
-            <h2>Training Domains</h2>
-            
-            <div class="zone-card" data-level="intermediate">
-                <div class="zone-header">
-                    <h3>Cybersecurity</h3>
-                    <span class="difficulty">50x - 150x</span>
-                </div>
-                <ul class="training-list">
-                    <li>Network Security & Penetration Testing</li>
-                    <li>Threat Intelligence & Analysis</li>
-                    <li>Security Operations Center (SOC)</li>
-                    <li>Incident Response & Forensics</li>
-                    <li>Reverse Engineering & Malware Analysis</li>
-                </ul>
-            </div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Welcome to the Training Center</h2>
+            <p class="section-description">
+                An interactive learning platform designed to help you grow your skills through structured training paths.
+                Choose your difficulty level and start your journey.
+            </p>
+        </div>
+    </section>
 
-            <div class="zone-card" data-level="advanced">
-                <div class="zone-header">
-                    <h3>Web Security</h3>
-                    <span class="difficulty">100x - 250x</span>
-                </div>
-                <ul class="training-list">
-                    <li>OWASP Top 10 Vulnerabilities</li>
-                    <li>XSS, CSRF, SQLi Attack Vectors</li>
-                    <li>API Security & Authentication</li>
-                    <li>Web Application Firewalls (WAF)</li>
-                    <li>Secure Coding Practices</li>
-                </ul>
-            </div>
-
-            <div class="zone-card" data-level="expert">
-                <div class="zone-header">
-                    <h3>Vulnerability Research</h3>
-                    <span class="difficulty">200x - 400x</span>
-                </div>
-                <ul class="training-list">
-                    <li>Zero-Day Discovery & Exploit Development</li>
-                    <li>Binary Exploitation & Buffer Overflows</li>
-                    <li>Fuzzing & Code Analysis</li>
+    <script src="script.js"></script>
+</body>
+</html>
                     <li>Return-Oriented Programming (ROP)</li>
                     <li>CVE Research & Bug Bounty Hunting</li>
                 </ul>
